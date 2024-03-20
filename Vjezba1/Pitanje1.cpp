@@ -1,39 +1,37 @@
-/*
-Vlasnik ste niza plaža na najljepšoj plaži u Pučišću na Braču. Na plažama iznamljujete razne predmete kao što su suncobrani, lopte, stolci i slično, te vam je već pomalo nespretno voditi evidenciju o tome koje sve plaže imate, a pogotovo koji su sve predmeti dostupni na svakoj te ste se odlučili baciti na posao i napraviti C++ program koji će vam u tome pomoći.
-
-Odlučili ste definirati niz plaža, i za svaku plažu bilježiti niz predmeta koje iznamljujete (kako vam ne bi nestali).
-
-Klasa Plaza ima sljedeća svojstva:
-
-    veličinu (duljina)
-    GPS koordinate (double X i double Y)
-    niz predmeta koji su dostupni
-
-Klasa Predmet ima sljedeća svojstva:
-
-    opis
-    kolicina
-
-U main programu potrebno je od korisnika tražiti unos broja N, nakon kojeg se unose podaci o N plaža. Nakon što se unesu sva polja, potrebno je tražiti unos broja M, koji označava broj predmeta, te je potrebno unijeti tih M predmeta (neka plaža može nuditi više predmeta). Kod unosa pripaziti da se GPS lokacija doista odnosi na mjesto u blizini Pučišća.
-
-Primjer izvođenja:
-
-Unesite broj plaža (N):2
- Unesite velicinu i lokaciju za 1. plazu:
- 1345
- 43.346216 16.734324
- Unesite velicinu i lokaciju za 2. plazu:
- 2115
- 43.348236 16.734334
- Unesite broj predmeta (M): 1
- Unesite redni broj plaze kojoj pripada 1. predmet: 2
- Unesite kolicinu i opis predmeta: 19 Lopta
- 
- Ispis plaza i predmeta:
- 1. 43.346216 16.734324 D=1345 - predmeti:
-
-2. 43.348236 16.734334 D=2115 - predmeti: 19 Lopta 
-*/
+//Vlasnik ste niza plaža na najljepšoj plaži u Pučišću na Braču.Na plažama iznamljujete razne predmete kao što su suncobrani, lopte, stolci i slično, te vam je već pomalo nespretno voditi evidenciju o tome koje sve plaže imate, a pogotovo koji su sve predmeti dostupni na svakoj te ste se odlučili baciti na posao i napraviti C++ program koji će vam u tome pomoći.
+//
+//Odlučili ste definirati niz plaža, i za svaku plažu bilježiti niz predmeta koje iznamljujete(kako vam ne bi nestali).
+//
+//Klasa Plaza ima sljedeća svojstva :
+//
+//veličinu(duljina)
+//GPS koordinate(double X i double Y)
+//niz predmeta koji su dostupni
+//
+//Klasa Predmet ima sljedeća svojstva :
+//
+//opis
+//kolicina
+//
+//U main programu potrebno je od korisnika tražiti unos broja N, nakon kojeg se unose podaci o N plaža.Nakon što se unesu sva polja, potrebno je tražiti unos broja M, koji označava broj predmeta, te je potrebno unijeti tih M predmeta(neka plaža može nuditi više predmeta).Kod unosa pripaziti da se GPS lokacija doista odnosi na mjesto u blizini Pučišća.
+//
+//Primjer izvođenja :
+//
+//Unesite broj plaža(N) : 2
+//Unesite velicinu i lokaciju za 1. plazu :
+//	1345
+//	43.346216 16.734324
+//	Unesite velicinu i lokaciju za 2. plazu :
+//	2115
+//	43.348236 16.734334
+//	Unesite broj predmeta(M) : 1
+//	Unesite redni broj plaze kojoj pripada 1. predmet : 2
+//	Unesite kolicinu i opis predmeta : 19 Lopta
+//
+//	Ispis plaza i predmeta :
+//1. 43.346216 16.734324 D = 1345 - predmeti :
+//
+//	2. 43.348236 16.734334 D = 2115 - predmeti : 19 Lopta
 
 
 
