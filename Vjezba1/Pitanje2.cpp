@@ -51,10 +51,6 @@ int main(){
 }
 */
 
-
-
-
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -67,11 +63,7 @@ public:
     int broj, cijena;
     string ime, prezime;
 
-    Igrac(string _ime, string _prezime)
-    {
-        ime = _ime;
-        prezime = _prezime;
-    }
+    Igrac(string _ime, string _prezime) : ime(_ime), prezime(_prezime), broj(0), cijena(0) {}
 
     void ispisi() {
         cout << "Ime: " << ime << " - Prezime: " << prezime << " - Broj na dresu: " << broj << " - Cijena: " << cijena << endl;
@@ -124,7 +116,7 @@ public:
         return uk;
     }
 
-    int prosjecnaCijena()
+    double prosjecnaCijena()
     {
         double pros = (double)ukupnaCijena() / igraci.size();
         return pros;
@@ -154,4 +146,6 @@ int main()
     cout << "Ukupna cijena svih igraca: " << ekipa.ukupnaCijena() << endl;
     cout << "Prosjecna cijena jednog igraca: " << ekipa.prosjecnaCijena() << endl;
 }
+
+
 
