@@ -48,7 +48,7 @@ UPIS
 1345
 43.346216 16.734324
 2115
-43.348236 16.734334
+53.348236 16.734334
 1
 2
 19 Lopta 
@@ -80,7 +80,7 @@ public:
 	}
 
 	//Kod unosa pripaziti da se GPS lokacija doista odnosi na mjesto u blizini Pučišća. => 43.34778 16.73389
-	bool Provjerablizine(double unesena_x, double unesena_y)
+	bool Provjerablizine(Plaza &p)
 	{
 		const double max_dop = 0.1;
 
@@ -89,7 +89,7 @@ public:
 		const double y_p = 16.73389;
 
 		//EUKLIDSKA FORMULA
-		double udaljenost = pow(pow(x_p - unesena_x, 2) + pow(y_p - unesena_y, 2), 0.5);
+		double udaljenost = pow(pow(x_p - x, 2) + pow(y_p - y, 2), 0.5);
 
 		//TRUE AKO JE UDALJENOST MANJA OD MAKSIMALNE DOPUSTENE
 		return udaljenost <= max_dop;
@@ -122,20 +122,18 @@ int main()
 
 	int vel;
 	double x, y;
+	
 	for (int i = 0; i < n; i++)
 	{
 		cout << "Unesite velicinu i lokaciju za " << i + 1 << ". plazu:" << endl;
 		cin >> vel;
-
-		//UPIS I PROVJERA KORDINATA
-		do
+		cin >> x >> y;
+		Plaza provjera(vel, x, y);
+		while (Plaza(vel, x, y).Provjerablizine(provjera) == 0)
 		{
+			cout << "Unesi ispravne koordinate za plazu!" << endl;
 			cin >> x >> y;
-			if (Plaza(vel, x, y).Provjerablizine(x, y) == 0)
-			{
-				cout << "Unesi ispravne koordinate za plazu!" << endl;
-			}
-		} while (Plaza(vel, x, y).Provjerablizine(x, y) == 0);
+		}
 		plaze.push_back(Plaza(vel, x, y));
 	}
 
