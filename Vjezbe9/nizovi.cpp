@@ -145,8 +145,5 @@ int main()
 	Niz<int> p2(v2);
 	cout << p1.manje_od(p2) << endl;
 	cout << (p1 < p2) << endl;  // operator <
-
-
-
 	return 0;
 }
