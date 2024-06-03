@@ -141,13 +141,11 @@ namespace Sastanak
     public:
         virtual string tekstualno() = 0;
     };
-    class NeispravnaTocka
+    class NeispravnaTocka : exception
     {
     public:
-        string what()
-        {
-            return "bacanje greske!";
-        }
+        string tekst;
+        NeispravnaTocka(string tekst) : tekst(tekst) {}
     };
     class Tocka : public ElementDnevnogReda
     {
@@ -159,7 +157,7 @@ namespace Sastanak
         {
             if (opis1 == "" || opis2 == "")
             {
-                throw NeispravnaTocka();
+                throw NeispravnaTocka("greska");
             }
         }
         string tekstualno() override
@@ -268,7 +266,7 @@ int main() {
         Tocka t(4, "Tocka cetvrta", "");  // prazan opis - baca se iznimka
     }
     catch (NeispravnaTocka& e) {
-        cout << e.what() << endl;
+        cout << e.tekst << endl;
     }
 
     //**************************************************************************
@@ -335,4 +333,3 @@ int main() {
     cout << Tocka::unisteno << endl;
     //**************************************************************************
 }
-
